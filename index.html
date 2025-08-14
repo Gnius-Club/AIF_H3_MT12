@@ -1,24 +1,292 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Playbook — 3º Preparatoria — Misión M12: Definiendo las Rutas de la API</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
+  <header>
+    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M12: Definiendo las Rutas de la API</strong></h1>
+    <div class="header-widgets">
+      <div class="timer-container">
+        <span id="timer">⏱️ 00:00</span>
+        <button id="startStop">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle-input">
+          <span class="slider round"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <aside class="activity-list">
+      <h2>Actividades</h2>
+      <ul>
+        <li><a href="#activity-0">📝</a></li>
+        <li><a href="#activity-1">1</a></li>
+        <li><a href="#activity-2">2</a></li>
+        <li><a href="#activity-3">3</a></li>
+        <li><a href="#activity-4">4</a></li>
+        <li><a href="#activity-5">5</a></li>
+      </ul>
+      <div class="sidebar-info">
+        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+      </div>
+    </aside>
+    <main class="content">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+      <!-- 0) De un Vistazo -->
+      <section class="activity-card" id="activity-0">
+        <h2 class="activity-title">📝 De un Vistazo: Misión M12: Definiendo las Rutas de la API</h2>
+        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables.</p>
+        <div class="overview-table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h3>Objetivos e “I Can”</h3>
+                  <ul>
+                    <li>Puedo comprender el concepto de 'rutas' (routing) y su rol en la arquitectura de una API.</li>
+                    <li>Puedo implementar la estructura de 2-3 rutas API en un servidor backend, vinculándolas a funciones de controlador vacías.</li>
+                    <li>Puedo verificar la funcionalidad básica de las rutas API mediante herramientas de prueba o unitarias.</li>
+                  </ul>
+                  <h3>Secuencia y tiempos</h3>
+                  <ol>
+                    <li>Saludo Interactivo con IA — 3 min</li>
+                    <li>“I Can” + Desafío — 5–7 min</li>
+                    <li>AI GYM — 10–12 min</li>
+                    <li>Brain Spark — 17–20 min</li>
+                    <li>GNIUS STORM — 5 min</li>
+                  </ol>
+                  <h3>Entregable del Micro-Proyecto</h3>
+                  <ul>
+                    <li>Un fragmento de código con 2-3 rutas API definidas y vinculadas a funciones de controlador vacías, integrado en el repositorio de GitHub del proyecto.</li>
+                  </ul>
+                </td>
+                <td>
+                  <h3>Criterios de calidad</h3>
+                  <ul>
+                    <li>Claridad en la definición de rutas.</li>
+                    <li>Correcta vinculación de rutas a controladores.</li>
+                    <li>Adhesión al diseño de API de M05.</li>
+                    <li>Integración exitosa en el repositorio de GitHub.</li>
+                    <li>Capacidad de probar las rutas (ej. con Postman).</li>
+                  </ul>
+                  <h3>Materiales y preparación</h3>
+                  <ul>
+                    <li>Proyector e internet</li>
+                    <li>Postman / Insomnia (u otra herramienta de prueba de API)</li>
+                    <li>GitHub (acceso al repositorio del servidor base de M11)</li>
+                    <li>Node.js / Express (o framework backend similar)</li>
+                    <li>Documento de Diseño de API de la Misión M05.</li>
+                    <li>Ejemplo mínimo de ruta y controlador listo.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- 1) Saludo Interactivo con IA -->
+      <section class="activity-card" id="activity-1">
+        <h2 class="activity-title">Saludo Interactivo con IA</h2>
+        <p class="activity-purpose">Enmarcar foco y activar a Xolo con perfil/intereses.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
+              <p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema y su valor profesional (backend, arquitectura de API, rutas).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Equipo: hoy profundizaremos en la arquitectura de nuestras APIs. Pasaremos del diseño a la implementación de las "direcciones" que nuestro servidor escuchará. Nuestro objetivo es construir el esqueleto funcional de nuestra API backend.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
+              <p class="step-instructions">Cada estudiante envía a Xolo: “Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Misión M12: Definiendo las Rutas de la API. Necesito foco en rutas de API y desarrollo backend.”</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas para el trabajo con rutas de API.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 2) “I Can” + Desafío -->
+      <section class="activity-card" id="activity-2">
+        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
+        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
+              <p class="step-instructions">Proyectar Diapositiva 3. Describe el reto de transformar el diseño de API en un esqueleto funcional de rutas en el servidor backend.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El reto es implementar las rutas de nuestra API, convirtiendo nuestro diseño conceptual en código funcional. Esto nos permitirá tener un esqueleto de API listo para integrar la lógica de negocio.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
+              <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1 “I Can” alineado al entregable.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo implementar rutas de API usando convenciones RESTful para crear un esqueleto de servidor robusto.”</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 3) AI GYM -->
+      <section class="activity-card" id="activity-3">
+        <h2 class="activity-title">AI GYM</h2>
+        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Marco del día</h3>
+              <p class="step-instructions">Proyectar Diapositiva 5. Introduce el marco: Arquitectura Backend: Rutas de API (Routing). Explica el concepto de "rutas" como "direcciones" para el servidor y cómo conectan el diseño de M05 al código. Menciona errores comunes como path matching incorrecto o controladores faltantes.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El routing es la base de cualquier API. Define cómo el servidor responde a diferentes solicitudes HTTP. Este marco agrega valor porque estructura nuestra API desde el inicio. Eviten rutas ambiguas o controladores no definidos. Usen el diseño de M05 como criterio para validar sus rutas.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Mini-demostración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 6. Construye un ejemplo mínimo de una ruta (`GET /api/users`) definida en un framework backend (ej. Express.js) y vinculada a una función de controlador vacía.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Observa cómo una ruta específica se define y se asocia a una función. Esta función es el "controlador" que eventualmente manejará la lógica. Verifica que la ruta y el controlador tengan nombres descriptivos y coherentes.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Check rápido</h3>
+              <p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves sobre el propósito de una ruta y la función del controlador.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Pregunta 1: ¿Cuál es el propósito principal de definir una ruta en una API? Pregunta 2: ¿Qué rol jugará la función de "controlador" asociada a esa ruta?</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 4) Brain Spark -->
+      <section class="activity-card" id="activity-4">
+        <h2 class="activity-title">Brain Spark</h2>
+        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Producción</h3>
+              <p class="step-instructions">Proyectar Diapositiva 8. Implementa 2-3 rutas API del diseño de M05 en el servidor base (M11), vinculándolas a funciones de controlador vacías. Checklist: 1. Identifica endpoints clave de M05. 2. Define métodos HTTP (GET, POST, etc.) y sus paths. 3. Crea funciones de controlador vacías para cada ruta. 4. Integra el código en el archivo de rutas del servidor. 5. Verifica que el servidor levanta sin errores. Tiempo de trabajo autónomo.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">N/A</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Iteración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 9. Asegura que las rutas sigan convenciones RESTful y que los nombres de los controladores sean descriptivos y coherentes con la funcionalidad esperada.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Antes de cerrar: valida que tus rutas sean claras y que los nombres de tus controladores reflejen su propósito. Si no es así, refactoriza para mejorar la legibilidad y mantenibilidad.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Evidencia</h3>
+              <p class="step-instructions">Proyectar Diapositiva 10. Solicita evidencia: URL del repositorio de GitHub con el commit de las rutas implementadas. Opcional: captura de pantalla de Postman haciendo una petición a una de las rutas y recibiendo una respuesta (aunque sea vacía).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Entrega con nombre: M12_RutasAPI_[Equipo/Nombre]. Incluye el enlace al repositorio y, si es posible, una captura que demuestre que tus rutas responden.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 5) GNIUS STORM -->
+      <section class="activity-card" id="activity-5">
+        <h2 class="activity-title">GNIUS STORM</h2>
+        <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
+              <p class="step-instructions">2–3 presentaciones de 30–45 s, centradas en las rutas implementadas, cómo mapean al diseño de API y la respuesta del servidor.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Enfoca tu presentación en la decisión clave de cómo mapeaste una ruta de tu diseño de API a su implementación en código, y qué respuesta obtuviste del servidor.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
+              <p class="step-instructions">Proyectar Diapositiva 11. Síntesis: 1 aprendizaje clave sobre la interfaz cliente-servidor, 1 criterio que más impactó (coherencia diseño-código) y 1 siguiente paso (implementar lógica de negocio).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Síntesis: Hoy aprendimos que las rutas son la interfaz crucial entre el cliente y el servidor. El criterio clave fue la coherencia entre nuestro diseño de API y su implementación. Nuestro siguiente paso será implementar la lógica de negocio dentro de estos controladores.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
