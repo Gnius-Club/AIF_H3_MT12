@@ -51,7 +51,7 @@
                 <div class="command-section">
                     <h3>🎯 Objetivo de Aprendizaje</h3>
                     <div class="objective-box">
-                        <p><strong>Los estudiantes podrán:</strong> implementar rutas de servidor vinculadas a controladores usando JDoodle y GitHub para realizar pruebas de endpoints y comprender la transición del contrato API al código real.</p>
+                        <p><strong>Los estudiantes podrán:</strong> implementar rutas de servidor vinculadas a controladores usando Vibe Coding y herramientas de desarrollo para realizar pruebas de endpoints y comprender la transición del contrato API al código real.</p>
                     </div>
                 </div>
                 <div class="command-section xolo-prompt">
@@ -63,7 +63,7 @@
                                 <i class="fas fa-copy"></i> Copiar
                             </button>
                         </div>
-                        <pre id="main-prompt">Explícame qué es routing en un servidor y por qué una “ruta” funciona como una dirección que el backend escucha. Analicemos cómo traducir un endpoint del Documento de Diseño de API (método + ruta) a código real, y qué significa “conectar” la ruta con una función de controlador vacía. Guíame a definir 2–3 rutas con nombres coherentes, y a verificar que el servidor responde (aunque sea con respuestas temporales).</pre>
+                        <pre id="main-prompt">Explícame qué es routing en un servidor y por qué una "ruta" funciona como una dirección que el backend escucha. Analicemos cómo traducir un endpoint del Documento de Diseño de API (método + ruta) a código real, y qué significa "conectar" la ruta con una función de controlador vacía. Guíame a definir 2–3 rutas con nombres coherentes, y a verificar que el servidor responde (aunque sea con respuestas temporales).</pre>
                     </div>
                 </div>
                 <div class="command-section">
@@ -77,7 +77,7 @@
                         <div class="essential-card">
                             <div class="essential-icon">🔧</div>
                             <h4>Habilidad Técnica</h4>
-                            <p>Implementar y probar rutas de servidor vinculadas a controladores vacíos.</p>
+                            <p>Implementar y probar rutas de servidor vinculadas a controladores usando Vibe Coding.</p>
                         </div>
                         <div class="essential-card">
                             <div class="essential-icon">🧪</div>
@@ -96,11 +96,13 @@
                     <div class="materials-checklist">
                         <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
                         <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
-                        <label><input type="checkbox"> Computadora con acceso a internet (1 por estudiante)</label>
-                        <label><input type="checkbox"> Acceso a JDoodle (https://www.jdoodle.com/) para ejecución de código</label><label><input type="checkbox"> Acceso a GitHub (https://github.com/) para control de versiones</label>
+                        <label><input type="checkbox"> Computadora individual por estudiante</label>
+                        <label><input type="checkbox"> Acceso a Replit (https://replit.com/) o Bolt.new (https://bolt.new/)</label>
+                        <label><input type="checkbox"> Acceso a GitHub (https://github.com/) para control de versiones</label>
+                        <label><input type="checkbox"> Acceso a Postman (https://www.postman.com/) o Thunder Client (extensión de VS Code)</label>
                         <label><input type="checkbox"> Documento de Diseño de API (Misión 05)</label>
-                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con CÓDIGO en JDoodle</label>
-                        <label><input type="checkbox"> 📋 Para esta misión: En GitHub → Crear nuevo archivo → Copiar código del servidor → Commit changes</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa VIBE CODING para implementar routing backend</label>
+                        <label><input type="checkbox"> 📋 Para esta misión: Servidor base de la Misión 11 como punto de partida</label>
                     </div>
                     <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantener seguras las credenciales de GitHub y asegurar que el entorno de desarrollo web esté guardando los cambios.</p>
                 </div>
@@ -109,7 +111,7 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot">1</div>
-                            <div class="timeline-item">
+                            <div class="timeline-content">
                                 <strong>Intro a la Misión</strong>
                                 <span class="time-badge">2 min</span>
                                 <p>Bienvenida, I Can Statement y contexto de la misión.</p>
@@ -128,7 +130,7 @@
                             <div class="timeline-content">
                                 <strong>Brain Spark</strong>
                                 <span class="time-badge">20 min</span>
-                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                                <p>Implementar rutas reales vinculadas a controladores con XOLO y Vibe Coding.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
@@ -154,7 +156,10 @@
                     <div class="troubleshooting-list">
                         <ul>
                             <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
-                            <li><strong>Si el servidor no responde:</strong> Verificar que el puerto esté correctamente configurado y que el código no tenga errores de sintaxis.</li><li><strong>Si GitHub da error al subir:</strong> Revisar que los cambios estén confirmados (committed) y que la conexión con el repositorio remoto sea correcta.</li><li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                            <li><strong>Si el servidor no responde:</strong> Verificar que el puerto esté correctamente configurado y que el código no tenga errores de sintaxis. Revisar los logs de la consola.</li>
+                            <li><strong>Si GitHub da error al subir:</strong> Revisar que los cambios estén confirmados (committed) y que la conexión con el repositorio remoto sea correcta.</li>
+                            <li><strong>Si las pruebas de endpoints fallan:</strong> Verificar que el método HTTP (GET, POST, etc.) y la ruta coincidan exactamente con lo definido en el código. Usar Postman o Thunder Client para hacer pruebas más detalladas.</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
                         </ul>
                     </div>
                 </div>
@@ -190,7 +195,8 @@
                         <ul>
                             <li>Escucha la misión del día.</li>
                             <li>Loguearse en Gnius Space.</li>
-                            <li>Preparación para trabajar en parejas.</li>
+                            <li>Prepararse para trabajar de manera individual.</li>
+                            <li>Tener disponible su Documento de Diseño de API (Misión 05).</li>
                         </ul>
                     </div>
                 </div>
@@ -198,7 +204,7 @@
                     <h4>📊 Diapositiva 1: I Can Statement</h4>
                     <div class="slide-content">
                         <p><strong>🎯 Hoy seré capaz de:</strong></p>
-                        <p class="highlight-text">🤖 A implementar rutas en el servidor para que el backend responda correctamente a cada dirección.</p>
+                        <p class="highlight-text">🤖 Implementar rutas en el servidor usando Vibe Coding para que el backend responda correctamente a cada dirección.</p>
                         <p><strong>Aplicación real:</strong> Los servidores de aplicaciones como Netflix usan routing para dirigir tu solicitud de "reproducir" exactamente al video que quieres ver.</p>
                         <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
@@ -228,8 +234,9 @@
                         <p class="xolo-status">✅ XOLO ACTIVO</p>
                         <ul>
                             <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
-                            <li>Explica cómo traducir un endpoint del diseño a código real.</li>
+                            <li>Explica cómo traducir un endpoint del diseño de API a código real.</li>
                             <li>Introduce el concepto de conectar rutas con controladores para mantener el orden.</li>
+                            <li>Enseña sobre métodos HTTP (GET, POST, PUT, DELETE) y su propósito.</li>
                             <li>Responde dudas sobre los conceptos.</li>
                         </ul>
                     </div>
@@ -238,6 +245,7 @@
                         <ul>
                             <li>Abrir el chat con XOLO y saludarlo.</li>
                             <li>Aprender a definir rutas con nombres coherentes.</li>
+                            <li>Comprender la relación entre endpoints del diseño y rutas del código.</li>
                             <li>Aprender a verificar que el servidor responde a las peticiones.</li>
                             <li>Despejar todas sus dudas preguntando a XOLO.</li>
                         </ul>
@@ -276,8 +284,9 @@
                         <h4>👨‍🏫 Rol del Maestro</h4>
                         <ul>
                             <li>Proyecta la diapositiva 3.</li>
-                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
-                            <li>Entrega por parejas los servidores conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a implementar sus rutas. Usen Vibe Coding para generar el código, prueben los endpoints y documenten todo".</li>
+                            <li>Asegúrate de que todos tengan acceso a su servidor base de la Misión 11.</li>
+                            <li>Circula para verificar que están probando correctamente sus endpoints.</li>
                             <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
                         </ul>
                     </div>
@@ -285,49 +294,59 @@
                         <h4>🤖 Rol de XOLO</h4>
                         <p class="xolo-status">✅ XOLO ACTIVO</p>
                         <ul>
-                            <li>Ayuda a desarrollar una idea y un VIBE que aplique la creación de un esqueleto de rutas funcional.</li>
-                            <li>Entrega el GCS de la idea del genio.</li>
-                            <li>Resuelve errores de sintaxis o lógica.</li>
+                            <li>Ayuda a seleccionar 2-3 endpoints del diseño de API para implementar.</li>
+                            <li>Guía en la creación del código de rutas y controladores vacíos.</li>
+                            <li>Orienta sobre nomenclatura y organización del código.</li>
+                            <li>Ayuda a probar los endpoints con respuestas temporales.</li>
+                            <li>Resuelve errores de sintaxis o configuración.</li>
                         </ul>
                     </div>
                     <div class="role-card role-student">
                         <h4>👦 Rol del Alumno</h4>
                         <ul>
-                            <li>Trabajar con XOLO una idea y un VIBE para convertir endpoints en rutas reales.</li>
-                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
-                            <li>Depurar su programa con XOLO si hay errores.</li>
-                            <li>Actualizar el repositorio de GitHub y registrar evidencias de las respuestas.</li>
+                            <li>Trabajar con XOLO para seleccionar endpoints del diseño de API.</li>
+                            <li>Usar Vibe Coding para generar código de rutas y controladores.</li>
+                            <li>Implementar las rutas en el servidor base.</li>
+                            <li>Probar los endpoints con Postman o Thunder Client.</li>
+                            <li>Actualizar el repositorio de GitHub con el código nuevo.</li>
+                            <li>Registrar evidencias de las respuestas del servidor.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="slide-reference">
                     <h4>📊 Diapositiva 3: Brain Spark</h4>
                     <div class="slide-content">
-                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear tus rutas:</strong></p>
                         <div class="prompt-box">
-                            <pre>"Ayúdame a implementar el esqueleto de rutas con Vibe Coding: elige conmigo 2–3 endpoints de mi diseño M05 y conviértelos en rutas reales en el servidor, vinculadas a controladores vacíos. Guíame a decidir una convención de nombres y a probarlas con peticiones simples. Ejecuta: agrega el fragmento al repo de GitHub, levanta el servidor y registra evidencia de que las rutas responden (captura o log)."</pre>
+                            <pre>"Ayúdame a implementar el esqueleto de rutas con Vibe Coding: elige conmigo 2–3 endpoints de mi diseño M05 (especificando método HTTP + ruta) y conviértelos en rutas reales en el servidor, vinculadas a controladores vacíos. Guíame a decidir una convención de nombres y a probarlas con respuestas temporales. Dame el código listo para agregar a mi servidor."</pre>
                         </div>
-                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tus rutas:</strong></p>
                         <ul>
                             <li>¿El servidor responde con el mensaje esperado al acceder a la ruta?</li>
                             <li>¿Qué sucede si cambias el método de la petición (ej. de GET a POST)?</li>
                             <li>¿Funciona igual la ruta si usas mayúsculas o minúsculas?</li>
                             <li>¿Cómo asegura el contrato API que el backend y el frontend hablen el mismo idioma?</li>
-                            <li>¿Por qué es importante la dirección humana para decidir qué rutas son necesarias y cuáles no?</li>
+                            <li>¿Por qué es importante la organización de código para decidir qué rutas son necesarias y cuáles no?</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem;"><strong>3. 📝 Prueba y documenta:</strong></p>
+                        <ul>
+                            <li>Usa Postman o Thunder Client para probar cada ruta</li>
+                            <li>Captura las respuestas exitosas del servidor</li>
+                            <li>Sube tu código actualizado a GitHub</li>
                         </ul>
                     </div>
                 </div>
                 <div class="optional-script">
                     <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
                     <div class="collapsible-content">
-                        <p class="dialogue assistant">¡Es hora de crear! Vamos a convertir sus planos en una estructura real. Usen el prompt en pantalla para que XOLO los guíe en la creación del esqueleto de sus rutas. El flujo es simple: ideen el VIBE de su código, generen el GCS, llévenlo a su entorno de desarrollo y experimenten. Por ejemplo, podrían crear una ruta para 'obtener usuarios' y otra para 'crear publicación'. Prueben si responden correctamente y no olviden subir sus avances a GitHub. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar y a que su servidor sea sólido y profesional.</p>
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a convertir sus planos en una estructura real. Usen el prompt en pantalla para que XOLO los guíe en la creación del esqueleto de sus rutas. El flujo es: revisen su diseño de API de la Misión 05, seleccionen 2-3 endpoints para implementar, trabajen con XOLO usando Vibe Coding para generar el código, agréguen las rutas a su servidor, y pruébenlas. Por ejemplo, podrían crear una ruta GET /api/users para obtener usuarios y otra POST /api/posts para crear publicaciones. Usen Postman o Thunder Client para probar que responden correctamente. No olviden subir sus avances a GitHub y capturar las respuestas exitosas. Si tienen errores, pregúntenle a XOLO.</p>
                     </div>
                 </div>
                 <div class="challenge-prompt">
                     <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
                     <div class="prompt-box">
                         <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
-                        <p class="challenge-text">"Ya probé con rutas estáticas. ¿Puedes enseñarme cómo hacer que mi servidor maneje rutas con parámetros dinámicos?"</p>
+                        <p class="challenge-text">"Ya probé con rutas estáticas. ¿Puedes enseñarme cómo hacer que mi servidor maneje rutas con parámetros dinámicos (ej: /api/users/:id)? ¿Cómo valido que los parámetros sean correctos?"</p>
                     </div>
                 </div>
             </div>
@@ -347,7 +366,7 @@
                             <li>Organiza las parejas para compartir.</li>
                             <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
                             <li>Facilita retroalimentación constructiva.</li>
-                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales de routing en APIs profesionales.</li>
                         </ul>
                     </div>
                     <div class="role-card role-xolo">
@@ -360,10 +379,11 @@
                     <div class="role-card role-student">
                         <h4>👦 Rol del Alumno</h4>
                         <ul>
-                            <li>Demuestra su programa funcionando a otra pareja.</li>
-                            <li>Explica qué endpoints y controladores funcionan correctamente.</li>
-                            <li>Comparte un descubrimiento interesante.</li>
-                            <li>Da retroalimentación positiva al compañero.</li>
+                            <li>Comparte sus rutas funcionando con otra persona.</li>
+                            <li>Muestra las pruebas de endpoints en Postman/Thunder Client.</li>
+                            <li>Explica qué endpoints implementó y cómo responden.</li>
+                            <li>Comparte un descubrimiento interesante sobre routing.</li>
+                            <li>Da retroalimentación constructiva al compañero.</li>
                         </ul>
                     </div>
                 </div>
@@ -372,16 +392,16 @@
                     <div class="slide-content tps-structure">
                         <div class="tps-phase">
                             <h4>🤔 THINK (30 seg)</h4>
-                            <p>Reflexión individual: ¿Qué rutas funcionan mejor en tu servidor? ¿Qué te sorprendió del proceso de conexión?</p>
+                            <p>Reflexión individual: ¿Qué rutas funcionan mejor en tu servidor? ¿Qué te sorprendió del proceso de implementación?</p>
                         </div>
                         <div class="tps-phase">
                             <h4>👥 PAIR (2 min)</h4>
-                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
-                            <p class="highlight-text">Frase guía: "Mi servidor escucha peticiones en las rutas de mi diseño. Me sorprendió que la organización del código sea tan clara."</p>
+                            <p>Con otra persona: Muestren sus pruebas de endpoints y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi servidor escucha peticiones en las rutas de mi diseño. Me sorprendió que la organización del código con controladores sea tan clara."</p>
                         </div>
                         <div class="tps-phase">
                             <h4>💬 SHARE (2 min)</h4>
-                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                            <p>Retroalimentación mutua: ¿Qué convención de nombres usó tu compañero? Cierre del maestro sobre la importancia del routing en arquitectura backend.</p>
                         </div>
                     </div>
                 </div>
@@ -400,9 +420,9 @@
                         <h4>👨‍🏫 Rol del Maestro</h4>
                         <ul>
                             <li>Proyecta diapositiva 5 con las instrucciones.</li>
-                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Guía a los estudiantes para tomar las capturas correctas.</li>
                             <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
-                            <li>Felicita al grupo por completar la misión.</li>
+                            <li>Felicita al grupo por completar la misión y avanzar en arquitectura backend.</li>
                         </ul>
                     </div>
                     <div class="role-card role-xolo">
@@ -415,9 +435,10 @@
                     <div class="role-card role-student">
                         <h4>👦 Rol del Alumno</h4>
                         <ul>
-                            <li>Tomar screenshot de su código en MakeCode.</li>
-                            <li>Tomar screenshot de su conversación con XOLO.</li>
-                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Tomar screenshot de su código de rutas en el servidor.</li>
+                            <li>Tomar screenshot de las pruebas exitosas en Postman/Thunder Client.</li>
+                            <li>Tomar screenshot de su conversación con XOLO sobre diseño de rutas.</li>
+                            <li>Subir las tres evidencias a Gnius Space.</li>
                             <li>Dar click en "Finalizar Misión".</li>
                         </ul>
                     </div>
@@ -427,10 +448,12 @@
                     <div class="slide-content">
                         <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
                         <ol>
-                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
-                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                            <li>Una captura de pantalla de tu <strong>código de rutas y controladores</strong> en Replit/Bolt.new.</li>
+                            <li>Una captura de pantalla de las <strong>pruebas exitosas de endpoints</strong> en Postman o Thunder Client.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde diseñaron la implementación de rutas.</li>
                         </ol>
                         <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                        <p style="margin-top: 1rem;"><strong>🎯 Reflexión final:</strong> Ahora tu servidor puede escuchar y responder a peticiones específicas. ¡El routing es la columna vertebral de cualquier API!</p>
                     </div>
                 </div>
             </div>
